@@ -1,18 +1,19 @@
-# Getting Started with Create React App
+# Mars Rover APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+With the interest with space exploration increasing, and with our attention focused on Mars,
+one of the biggest humanity achievements is the fact of having a robot exploring Mars for us,
+more specifically the Curiosity Rover. Using one of the existing NASA API’s, more specifically the Mars Rover Photos, I made a
+frontend app, using React that enables a user to see 6 photos randomly picked from this API.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+## `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the server.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> In order to run the server, you need in first place, copy the content of `env.tpl` file to a new file named `.env`.
 
 ### `npm test`
 
