@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom"
+import { ToastContainer } from "react-toastify"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { Home } from "home"
+import { RoverPhotosContainer } from "rovers"
+import { NotFoundView } from "errors"
 
-export default App;
+const App: React.FC = () => (
+  <div className="flex h-screen w-full overflow-hidden bg-black">
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/rover/:roverName/sol/:solDay" element={<RoverPhotosContainer />} />
+      <Route path="*" element={<NotFoundView />} />
+    </Routes>
+    <ToastContainer autoClose={10000} theme={"light"} position={"bottom-left"} />
+  </div>
+)
+
+export { App }
